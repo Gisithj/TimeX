@@ -140,14 +140,6 @@ namespace TimeX.Controllers
                 }
                 return BadRequest(ex.Message);
             }
-          /*  if (_context.Customer == null)
-          {
-              return Problem("Entity set 'TimeXDbContext.Customer'  is null.");
-          }
-            _context.Customer.Add(customer);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetCustomer", new { id = customer.CustomerId }, customer);*/
         }
 
         // DELETE: api/Customers/5
