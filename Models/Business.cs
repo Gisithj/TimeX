@@ -28,6 +28,6 @@ namespace TimeX.Models
         public string Username { get; set; } = string.Empty;
         public string PasswordHash { get; set; } = string.Empty;
         [Required]
-        public ICollection<Facility> Facilities { get; set; }
+        public ICollection<Facility>? Facilities { get; set; }
     }
 }

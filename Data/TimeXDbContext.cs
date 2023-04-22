@@ -37,13 +37,33 @@ namespace TimeX.Data
                 .WithOne(f => f.Business)
                 .HasForeignKey(f => f.BusinessId)
                 .OnDelete(DeleteBehavior.Cascade);
-           }
+
+            modelBuilder.Entity<Facility>()
+                .HasOne<Business>(b=>b.Business)
+                .WithMany(b=>b.Facilities)
+                .HasForeignKey(u=>u.BusinessId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Reservation>()
+                .HasOne<Facility>(u=>u.Facility)
+                .WithMany(f => f.Reservations)
+                .HasForeignKey(r=>r.FacilityId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Reservation>()
+                .HasOne<Customer>(c=>c.Customer)
+                .WithMany(r=>r.Reservations)
+                .HasForeignKey(c=>c.CustomerId)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
+
 
 
         public DbSet<Admin> Admin { get; set; }
         public DbSet<Business> Business { get; set; }
         public DbSet<Facility> Facility { get; set; }
         public DbSet<Customer> Customer { get; set; }
+        public DbSet<TimeX.Models.Reservation>? Reservation { get; set; }
 
 
 

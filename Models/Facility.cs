@@ -21,6 +21,8 @@ namespace TimeX.Models
         [Required]
         public int PerHour { get; set; }
 
+        public ICollection<Reservation> Reservations { get; set; }
+
         public int BusinessId { get; set; }
         public Business Business { get; set; }
     }

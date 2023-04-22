@@ -81,6 +81,7 @@ modelbuilder.Services.AddScoped<ICustomerService, CustomerService>();
 modelbuilder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 modelbuilder.Services.AddScoped<IUserService, UserService>();
 modelbuilder.Services.AddScoped<IRoleService, RoleServices>();
+modelbuilder.Services.AddScoped<IReservationService, ReservationService>();
 modelbuilder.Services.AddHttpContextAccessor();
 
 var app = modelbuilder.Build();

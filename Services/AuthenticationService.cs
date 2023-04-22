@@ -67,7 +67,7 @@ namespace TimeX.Services
             {
                 new Claim(ClaimTypes.Name, customer.Username),
                 new Claim("CustomerId",customer.CustomerId.ToString()),
-                new Claim(ClaimTypes.Role,"Business")
+                new Claim(ClaimTypes.Role,"Customer")
 
             };
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(

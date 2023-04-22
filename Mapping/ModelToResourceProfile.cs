@@ -4,6 +4,7 @@ using TimeX.DTO.Admin;
 using TimeX.DTO.Business;
 using TimeX.DTO.Customer;
 using TimeX.DTO.Facility;
+using TimeX.DTO.Reservation;
 using TimeX.DTO.User;
 using TimeX.Models;
 
@@ -35,6 +36,10 @@ namespace TimeX.Mapping
             //FacilityDTOs
             CreateMap<Facility, CreateFacilityDto>().ReverseMap();
             CreateMap<Facility, GetFacilityDto>().ReverseMap();
+
+            //ReservationDTOs
+            CreateMap<Reservation, CreateReservationDto>().ReverseMap();
+            CreateMap<Reservation, GetReservationDto>().ReverseMap();
 
         }
     }

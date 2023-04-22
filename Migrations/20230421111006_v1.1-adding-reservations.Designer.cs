@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TimeX.Data;
 
@@ -11,9 +12,10 @@ using TimeX.Data;
 namespace TimeX.Migrations
 {
     [DbContext(typeof(TimeXDbContext))]
-    partial class TimeXDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230421111006_v1.1-adding-reservations")]
+    partial class v11addingreservations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

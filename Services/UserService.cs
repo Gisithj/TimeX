@@ -79,7 +79,7 @@ namespace TimeX.Services
             var result = string.Empty;
             if (_httpContextAccessor.HttpContext != null)
             {
-                result = _httpContextAccessor.HttpContext.User.FindFirstValue("UserId");
+                result = _httpContextAccessor.HttpContext.User.FindFirstValue("BusinessId");
             }
             return result;
         }
